@@ -54,7 +54,7 @@ advanced-anomaly-detection/
 
 ## 🌀 t-SNE Projection of Activities
 
-We reduced 561 dimensions into 2 using t-SNE. Clear clustering of activity groups can be observed — this structure is key to how the anomaly models work.
+We reduced 561 dimensions into 2 using t-SNE. Clear clustering of activity groups can be observed, this structure is key to how the anomaly models work.
 
 ![t-SNE](outputs/tsne_projection.png)
 
@@ -63,7 +63,7 @@ We reduced 561 dimensions into 2 using t-SNE. Clear clustering of activity group
 ## 🔍 Model 1: Isolation Forest
 
 - **Contamination rate:** 5%
-- **Basic idea:** Randomly partition feature space — anomalies are easier to isolate
+- **Basic idea:** Randomly partition feature space, anomalies are easier to isolate
 
 ### 📈 Anomaly Overlay (t-SNE)
 ![Isolation Forest](outputs/isolation_forest_tsne.png)
@@ -94,7 +94,7 @@ We reduced 561 dimensions into 2 using t-SNE. Clear clustering of activity group
 - **Structure:** 561 → 32 → 561
 - **Loss function:** MSE
 - **Epochs:** 30
-- Trains to reconstruct normal activity — anomalies have higher reconstruction error
+- Trains to reconstruct normal activity, anomalies have higher reconstruction error
 
 ### 🧠 Training Loss
 ![Autoencoder Loss](outputs/autoencoder_loss.png)
@@ -115,7 +115,7 @@ Using `shap.TreeExplainer`, we analyzed feature influence on Isolation Forest an
 ### 📊 Top Feature Importance (SHAP)
 ![SHAP Summary](outputs/shap_summary_bar.png)
 
-These features — primarily acceleration in `X` and `Z` axes — had the most impact on detecting outliers.
+These features — primarily acceleration in `X` and `Z` axes, had the most impact on detecting outliers.
 
 ---
 
